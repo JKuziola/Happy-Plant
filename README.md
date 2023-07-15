@@ -1,1 +1,1 @@
-# jnp2-android
+# SetAlone - Offline game of set 
