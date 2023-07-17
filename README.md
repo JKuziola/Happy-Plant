@@ -7,6 +7,6 @@
 - Kotlin
 - Android Studio 
 - Google material
-- ViewBinding e date picker
+- ViewBinding with date picker
 - Timer picker
 - Recyclerview
