@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Happy Plant</string>
+    <string name="task">Plants</string>
+    <string name="add_plant">Add plant</string>
+    <string name="name">Name</string>
+    <string name="data">Date</string>
+    <string name="timer">Hour</string>
+    <string name="cancel">Cancel</string>
+    <string name="new_plant">New Plant</string>
+    <string name="to_edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="empty_text">Oops! It seems that you don\'t have any plants here yet :(</string>
+</resources>
