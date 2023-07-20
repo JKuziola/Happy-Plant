@@ -3,7 +3,7 @@
 ## Plant watering reminder app
 Happy plant is an app that lets you properly take care of you precious plants.
 With our app you will never forget to water your plants.
-All you need to do is just download our app and add all of your plants - 
+All you need to do is just download our app (app-debug.apk file) and add all of your plants - 
 name them, set the watering period, date of the first watering, and you are all set!
 
 ## Notifications
