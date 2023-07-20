@@ -2,9 +2,10 @@ package com.example.happyplant.model
 
 data class Task(
     val title: String,
-    val hour: String,
-    val date: String,
+    var hour: String,
+    var date: String,
     val id: Int = 0,
+    val cycle: String = "7", // In days.
 
     ) {
 

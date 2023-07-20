@@ -28,6 +28,7 @@ class AddTaskActivity : AppCompatActivity() {
                 binding.tilTitle.text = it.title
                 binding.tilDate.text = it.date
                 binding.tilTimer.text = it.hour
+                binding.tilCycle.text = it.cycle
             }
         }
 
@@ -68,6 +69,7 @@ class AddTaskActivity : AppCompatActivity() {
                 title = binding.tilTitle.text,
                 hour = binding.tilTimer.text,
                 date = binding.tilDate.text,
+                cycle = binding.tilCycle.text,
                 id = intent.getIntExtra(TASK_ID, 0)
             )
             TaskDataSource.insertTask(task)

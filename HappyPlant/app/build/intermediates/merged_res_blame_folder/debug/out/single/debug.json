@@ -24,6 +24,10 @@
         "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\drawable\\ic_date.xml"
     },
     {
+        "merged": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_notifications.xml.flat",
+        "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\drawable\\ic_notifications.xml"
+    },
+    {
         "merged": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -40,8 +44,16 @@
         "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\drawable\\ic_timer.xml"
     },
     {
+        "merged": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\build\\intermediates\\merged_res\\debug\\drawable_plant.png.flat",
+        "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\drawable\\plant.png"
+    },
+    {
         "merged": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\src\\main\\res\\drawable\\ic_notification.xml"
     },
     {
         "merged": "C:\\Users\\jakub\\Desktop\\studia\\jnp2-android\\HappyPlant\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",

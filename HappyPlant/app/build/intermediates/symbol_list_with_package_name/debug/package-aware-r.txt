@@ -1058,7 +1058,11 @@ attr yearStyle
 attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1802,6 +1806,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_navigate
+drawable ic_notification
+drawable ic_notifications
 drawable ic_timer
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -1836,6 +1842,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable plant
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2048,6 +2055,7 @@ id groups
 id guid_end
 id guid_start
 id guideline
+id guideline2
 id header_title
 id hideable
 id home
@@ -2060,6 +2068,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView2
 id image_empty
 id immediateStop
 id included
@@ -2287,6 +2296,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id tilCycle
 id til_date
 id til_timer
 id til_title
@@ -2532,6 +2542,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string cycle
+string cycle_hint
 string data
 string delete
 string empty_text
@@ -3026,6 +3038,7 @@ style Theme_Design_Light
 style Theme_Design_Light_BottomSheetDialog
 style Theme_Design_Light_NoActionBar
 style Theme_Design_NoActionBar
+style Theme_HappyPlant
 style Theme_MaterialComponents
 style Theme_MaterialComponents_BottomSheetDialog
 style Theme_MaterialComponents_Bridge
@@ -3075,7 +3088,6 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
-style Theme_ToDoList
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark

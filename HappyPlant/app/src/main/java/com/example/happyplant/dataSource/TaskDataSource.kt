@@ -1,6 +1,7 @@
 package com.example.happyplant.dataSource
 
 import com.example.happyplant.model.Task
+import com.example.happyplant.ui.TaskListAdapter
 
 object TaskDataSource {
     private val list = arrayListOf<Task>()
@@ -8,11 +9,15 @@ object TaskDataSource {
     fun getList() = list.toList()
 
     fun insertTask(task: Task) {
-        if (task.id == 0) {
-            list.add(task.copy(id = list.size + 1))}
-        else {
-            list.remove(task)
-            list.add(task)
+        val existingTask = list.find { it.id == task.id }
+        if (existingTask != null) {
+            // Update existing task
+            val index = list.indexOf(existingTask)
+            list[index] = task
+        } else {
+            // Add new task
+            val newTask = task.copy(id = list.size + 1)
+            list.add(newTask)
         }
     }
 

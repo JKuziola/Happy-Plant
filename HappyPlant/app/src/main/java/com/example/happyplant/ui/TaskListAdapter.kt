@@ -1,5 +1,6 @@
 package com.example.happyplant.ui
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.PopupMenu
@@ -30,6 +31,7 @@ class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCa
         private val binding: ItemTaskBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
+        @SuppressLint("SetTextI18n")
         fun bind(item: Task) {
             binding.tvTitle.text = item.title
             binding.tvDate.text = "${item.date} ${item.hour}"
@@ -56,5 +58,7 @@ class TaskListAdapter : ListAdapter<Task, TaskListAdapter.TaskViewHolder>(DiffCa
 
 class DiffCallback : DiffUtil.ItemCallback<Task>() {
     override fun areItemsTheSame(oldItem: Task, newItem: Task) = oldItem == newItem
-    override fun areContentsTheSame(oldItem: Task, newItem: Task) = oldItem.id == newItem.id
+    override fun areContentsTheSame(oldItem: Task, newItem: Task) =
+        oldItem.id == newItem.id && oldItem.title == newItem.title && oldItem.date == newItem.date
+                && oldItem.hour == newItem.hour && oldItem.cycle == newItem.cycle
 }

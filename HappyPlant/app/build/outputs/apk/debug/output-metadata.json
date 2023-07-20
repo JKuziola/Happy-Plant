@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.todolist",
+  "applicationId": "com.example.happyplant",
   "variantName": "debug",
   "elements": [
     {

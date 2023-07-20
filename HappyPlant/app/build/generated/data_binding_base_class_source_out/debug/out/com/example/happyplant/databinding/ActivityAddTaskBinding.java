@@ -35,6 +35,9 @@ public final class ActivityAddTaskBinding implements ViewBinding {
   public final Guideline guidStart;
 
   @NonNull
+  public final TextInputLayout tilCycle;
+
+  @NonNull
   public final TextInputLayout tilDate;
 
   @NonNull
@@ -48,14 +51,15 @@ public final class ActivityAddTaskBinding implements ViewBinding {
 
   private ActivityAddTaskBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton buttonCancel, @NonNull MaterialButton buttonNewTask,
-      @NonNull Guideline guidEnd, @NonNull Guideline guidStart, @NonNull TextInputLayout tilDate,
-      @NonNull TextInputLayout tilTimer, @NonNull TextInputLayout tilTitle,
-      @NonNull MaterialToolbar toolbar) {
+      @NonNull Guideline guidEnd, @NonNull Guideline guidStart, @NonNull TextInputLayout tilCycle,
+      @NonNull TextInputLayout tilDate, @NonNull TextInputLayout tilTimer,
+      @NonNull TextInputLayout tilTitle, @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
     this.buttonCancel = buttonCancel;
     this.buttonNewTask = buttonNewTask;
     this.guidEnd = guidEnd;
     this.guidStart = guidStart;
+    this.tilCycle = tilCycle;
     this.tilDate = tilDate;
     this.tilTimer = tilTimer;
     this.tilTitle = tilTitle;
@@ -113,6 +117,12 @@ public final class ActivityAddTaskBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tilCycle;
+      TextInputLayout tilCycle = ViewBindings.findChildViewById(rootView, id);
+      if (tilCycle == null) {
+        break missingId;
+      }
+
       id = R.id.til_date;
       TextInputLayout tilDate = ViewBindings.findChildViewById(rootView, id);
       if (tilDate == null) {
@@ -138,7 +148,7 @@ public final class ActivityAddTaskBinding implements ViewBinding {
       }
 
       return new ActivityAddTaskBinding((ConstraintLayout) rootView, buttonCancel, buttonNewTask,
-          guidEnd, guidStart, tilDate, tilTimer, tilTitle, toolbar);
+          guidEnd, guidStart, tilCycle, tilDate, tilTimer, tilTitle, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

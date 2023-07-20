@@ -7,8 +7,16 @@ import android.view.View
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.work.Constraints
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.NetworkType
+import androidx.work.PeriodicWorkRequest
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
 import com.example.happyplant.dataSource.TaskDataSource
 import com.example.happyplant.databinding.ActivityMainBinding
+import java.util.concurrent.TimeUnit
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -23,6 +31,33 @@ class MainActivity : AppCompatActivity() {
         updateList()
 
         insertListeners()
+
+        // Create the notification channel
+        NotificationUtils.createNotificationChannel(this)
+
+        // Schedule the periodic work request
+        scheduleTaskNotificationWorker()
+    }
+
+    private fun scheduleTaskNotificationWorker() {
+
+        val constraints = Constraints.Builder()
+            .setRequiredNetworkType(NetworkType.NOT_REQUIRED)
+            .build()
+
+        val periodicWorkRequest = PeriodicWorkRequestBuilder<TaskNotificationWorker>(
+            repeatInterval = 15, // Set the desired interval in minutes
+            repeatIntervalTimeUnit = TimeUnit.MINUTES
+        )
+            .setConstraints(constraints)
+            .build()
+
+        WorkManager.getInstance(this)
+            .enqueueUniquePeriodicWork(
+                "TaskNotificationWorker",
+                ExistingPeriodicWorkPolicy.REPLACE,
+                periodicWorkRequest
+            )
     }
 
     private lateinit var addTaskActivityResultLauncher: ActivityResultLauncher<Intent>
@@ -33,7 +68,6 @@ class MainActivity : AppCompatActivity() {
                 updateList()
             }
         }
-
         editTaskActivityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 updateList()
@@ -55,12 +89,6 @@ class MainActivity : AppCompatActivity() {
             TaskDataSource.deleteTask(task)
             updateList()
         }
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) updateList()
-
     }
 
     private fun updateList() {
